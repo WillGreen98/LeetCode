@@ -33,6 +33,7 @@ class Solution {
 
                 for(int i = 0; i < input; i++) {
                     conversion += it->second;
+                }
             }
 
             return conversion;
