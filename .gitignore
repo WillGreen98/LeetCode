@@ -52,7 +52,7 @@ _deps
 # External projects
 *-prefix/
 
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
