@@ -262,4 +262,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+TODO/
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,c++,cmake,jetbrains,jetbrains+all
