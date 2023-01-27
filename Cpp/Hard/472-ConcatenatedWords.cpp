@@ -21,6 +21,17 @@ class Trie {
             root = new TrieNode();
         }
 
+        void insert(string word) {
+            TrieNode *node = root;
+            for(auto &a : word) {
+                int i = a - 'a';
+                if(node->children[i] == nullptr) node->children[i] = new TrieNode();
+                node = node->children[i];
+            }
+
+            node->isWord = true;
+        }
+
         bool search(string word) {
             TrieNode *node = root;
 
@@ -32,26 +43,10 @@ class Trie {
 
             return node->isWord;
         }
-
-        bool insert(string word) {
-            TrieNode *node = root;
-
-            for(auto &a : word) {
-                int i = a - 'a';
-                if(node->children[i] == nullptr) node->children[i] = new TrieNode();
-                node = node->children[i];
-            }
-
-            if(node->isWord) return false;
-
-            node->isWord = true;
-            return true;
-        }
 };
 
 class Solution {
     public:
-        TrieNode root;
         Trie trie;
 
         bool dfs(string word, int index, int count) {
@@ -81,6 +76,6 @@ class Solution {
             }
 
             return res;
-    }
+        }
 };
 // @lc code=end
